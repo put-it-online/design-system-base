@@ -1,1 +1,1 @@
-export {AbstractText} from './AbstractText';
+export {AbstractText} from './components/AbstractText';
