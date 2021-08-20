@@ -1,7 +1,11 @@
 import React from 'react';
 
-const TOKENS = { color: '#F00' };
+const TOKENS = { color: '#F00', sizes: {
+    small: 12,
+    medium: 24,
+    large: 72
+} };
 
-export const AbstractText = (elm) => (props) => {
-    return <elm style={{ color: TOKENS.color, fontSize: 24 }} {...props} />;
+export const AbstractText = (Elm) => (props) => {
+    return <Elm style={{ color: TOKENS.color, fontSize: TOKENS.sizes[props.size] || 16 }} {...props} />;
 }
